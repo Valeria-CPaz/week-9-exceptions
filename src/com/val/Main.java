@@ -8,28 +8,33 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        boolean continueLoop = true;
+
         do {
             try {
-                System.out.println("Please enter an integer numerator: ");
+
+                System.out.println("\nPlease enter an integer numerator: \t");
                 int numerator = scanner.nextInt();
 
-                System.out.println("Please enter and integer denominator: ");
+                System.out.println("\nPlease enter and integer denominator: \t");
                 int denominator = scanner.nextInt();
 
                 int result = quotient(numerator, denominator);
                 System.out.printf("%nResult: %d / %d = %d%n", numerator, denominator, result);
+                continueLoop = false;
 
             } catch (InputMismatchException inputMismatchException) {
 
-                System.out.printf("Error: ArithmeticException was thrown\n");
-                System.out.printf("Suggestion: You cannot enter 0\n");
+                System.out.printf("Error: Input was incorrect\n");
+                System.out.printf("Suggestion: You must enter integer values\n");
+                scanner.nextLine();
 
             } catch (ArithmeticException arithmeticException) {
                 System.out.printf("Error: ArithmeticException was thrown\n");
                 System.out.printf("Suggestion: You cannot enter 0\n");
 
             }
-        } while (true);
+        } while (continueLoop);
     }
 
     public static int quotient(int numerator, int denominator) throws ArithmeticException {
