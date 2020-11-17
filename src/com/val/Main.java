@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        boolean continueLoop = true;
+//        boolean continueLoop = true;
 
         do {
             try {
@@ -21,7 +21,7 @@ public class Main {
 
                 int result = quotient(numerator, denominator);
                 System.out.printf("%nResult: %d / %d = %d%n", numerator, denominator, result);
-                continueLoop = false;
+//                continueLoop = false;
 
             } catch (InputMismatchException inputMismatchException) {
 
@@ -37,7 +37,7 @@ public class Main {
             finally {
                 System.out.println("This is the finally statement, cleanup can fo on here");
             }
-        } while (continueLoop);
+        } while (true);
     }
 
     public static int quotient(int numerator, int denominator) throws ArithmeticException {
