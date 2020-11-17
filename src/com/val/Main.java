@@ -34,6 +34,9 @@ public class Main {
                 System.out.printf("Suggestion: You cannot enter 0\n");
 
             }
+            finally {
+                System.out.println("This is the finally statement, cleanup can fo on here");
+            }
         } while (continueLoop);
     }
 
