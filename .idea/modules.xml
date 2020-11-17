@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Week_9_Exceptions.iml" filepath="$PROJECT_DIR$/Week_9_Exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DivideByZeroException.iml" filepath="$PROJECT_DIR$/DivideByZeroException.iml" />
     </modules>
   </component>
 </project>
