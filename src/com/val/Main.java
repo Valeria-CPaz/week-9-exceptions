@@ -27,6 +27,18 @@ public class Main {
 
                 System.out.printf("Error: Input was incorrect\n");
                 System.out.printf("Suggestion: You must enter integer values\n");
+
+                System.err.printf("%s%n%n", inputMismatchException.getMessage());
+                inputMismatchException.printStackTrace();
+
+                StackTraceElement[] traceElements = inputMismatchException.getStackTrace();
+
+                for(StackTraceElement element : traceElements) {
+
+                    System.out.printf("%s\t", element.getClassName());
+                    System.out.printf("%s\t", element.getFileName());
+                }
+
                 scanner.nextLine();
 
             } catch (ArithmeticException arithmeticException) {
